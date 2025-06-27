@@ -87,7 +87,6 @@ Achieved **~98% test accuracy** – solid hands-on for CNNs ahead of face recogn
 
 ---
 
-## 📁 Folder Structure
 
 
 
