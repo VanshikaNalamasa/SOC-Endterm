@@ -1,7 +1,6 @@
-# SoC 2025 – Facial Recognition and Emotion Analysis Project
+# SOC 2025 – Facial Recognition and Emotion Analysis Project(ID:122)
 
-> **Author:** Vanshika Nalamasa  
-> **Program:**  Seasons of Code 2025  
+> **Mentee:** Vanshika Nalamasa  
 > **Mentors:** [Yash Choudhary, Sahil Kukreja]  
 > **Repo Purpose:** Midterm progress report + working code
 
