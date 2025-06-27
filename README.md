@@ -1,96 +1,94 @@
-# SOC-Midterm Report Facial Recognition and Emotional Analysis
+# SoC 2025 – Facial Recognition and Emotion Analysis Project
+
 > **Author:** Vanshika Nalamasa  
-> **Program:** IIT Bombay Summer of Code 2025  
-> **Mentors:** [Yash Choudhary, Sahil Kukreja]
+> **Program:**  Seasons of Code 2025  
+> **Mentors:** [Yash Choudhary, Sahil Kukreja]  
+> **Repo Purpose:** Midterm progress report + working code
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
-This project explores **recognizing handwritten code or digits using Convolutional Neural Networks (CNNs)**.  
-The final goal is to build a complete deep learning pipeline capable of identifying and interpreting handwritten programming code.  
-We're starting by working with digit recognition (MNIST), then moving to face recognition and beyond.
+This project involves building a system that can:
+1. **Recognize individuals** from facial features (face recognition)
+2. **Identify emotional states** (emotion analysis: happy, sad, angry, etc.)
+
+The system uses deep learning (mainly CNNs, possibly RNNs) to process images or videos and output identity and emotion.  
+Later stages will involve multi-task learning and real-time performance tuning using tools like **Grad-CAM**, **heatmaps**, and **quantization**.
 
 ---
 
 ## 📅 Week-wise Progress
 
-### ✅ Week 1: Fundamentals  
-**Topics Covered:**  
-- Python: [Kaggle Python Course](https://www.kaggle.com/learn/python)  
-- NumPy: [Beginner Tutorial](https://www.kaggle.com/code/legendadnan/numpy-tutorial-for-beginners-data-science)  
-- Pandas: [Kaggle Pandas Course](https://www.kaggle.com/learn/pandas)  
-- Data Visualization: [Kaggle Data Viz Course](https://www.kaggle.com/learn/data-visualization)  
-- Intro to PyTorch: [FreeCodeCamp PyTorch Course](https://www.youtube.com/watch?v=GIsg-ZUy0MY)
+###  Week 1: Foundations – Python & Libraries  
+**Topics:**  
+- [Python - Kaggle](https://www.kaggle.com/learn/python)  
+- [NumPy](https://www.kaggle.com/code/legendadnan/numpy-tutorial-for-beginners-data-science)  
+- [Pandas](https://www.kaggle.com/learn/pandas)  
+- [Data Visualization](https://www.kaggle.com/learn/data-visualization)  
+- [PyTorch Crash Course](https://www.youtube.com/watch?v=GIsg-ZUy0MY)
 
-**Activities:**  
-Completed foundational exercises on Python, NumPy, Pandas, and visualization using interactive Kaggle notebooks.  
-Also watched the PyTorch crash course to understand tensor operations and neural network basics.
-
----
-
-### ✅ Week 2: Deep Learning Theory  
-**Topics Covered:**  
-- [Neural Networks](https://youtube.com/playlist?list=PLuhqtP7jdD8CftMk831qdE8BlIteSaNzD)  
-- [Convolutional Neural Networks](https://youtube.com/playlist?list=PLuhqtP7jdD8CD6rOWy20INGM44kULvrHu)  
-- [Recurrent Neural Networks](https://youtube.com/playlist?list=PLuhqtP7jdD8ARBnzj8SZwNFhwWT89fAFr)
-
-**Activities:**  
-Learned the core ideas behind feedforward networks, CNNs, and RNNs.  
-Started understanding how CNNs work on image data, which is critical for handwritten digit/code recognition.
+**Work Done:**  
+Practiced Python libraries and data handling via Kaggle exercises.  
+Watched the freeCodeCamp PyTorch tutorial to understand tensors, layers, and training loops.
 
 ---
 
-### ✅ Week 3: Assignment 1 – Handwritten Digit Recognition  
+###  Week 2: Deep Learning Theory – Core Concepts  
+**Topics:**  
+- [Neural Networks Playlist](https://youtube.com/playlist?list=PLuhqtP7jdD8CftMk831qdE8BlIteSaNzD)  
+- [CNNs Playlist](https://youtube.com/playlist?list=PLuhqtP7jdD8CD6rOWy20INGM44kULvrHu)  
+- [RNNs Playlist](https://youtube.com/playlist?list=PLuhqtP7jdD8ARBnzj8SZwNFhwWT89fAFr)
 
-**Objective:**  
-Build a Convolutional Neural Network (CNN) to classify handwritten digits (0–9) using the MNIST dataset.
+**Work Done:**  
+Studied theoretical foundations of feedforward networks, CNNs, and RNNs.  
+Focused on convolution layers, pooling, and emotion-sequence modeling with RNNs.
 
-**Tools Used:**  
-- TensorFlow / Keras  
-- CNN with Conv2D, MaxPooling, BatchNormalization  
-- Matplotlib for performance visualization
+---
+
+###  Week 3: Assignment – Handwritten Digit Recognition
+
+**Task:**  
+Build a CNN model using the MNIST dataset to recognize handwritten digits (0–9).  
+
+**File:** [`assignment/handwritten_digit_cnn.py`](assignment/handwritten_digit_cnn.py)
+
+**Skills Practiced:**  
+- Preprocessing image data  
+- CNN modeling using Conv2D, MaxPooling2D, Dropout  
+- Evaluating using train/val/test split  
+- Visualization of accuracy and loss over epochs
 
 **Result:**  
-Achieved a **test accuracy of over 98%**.  
-The model was able to learn and generalize well using standard CNN layers.
-
-**📁 File:** [`assignment/handwritten_digit_cnn.py`](assignment/handwritten_digit_cnn.py)
+Achieved **~98% test accuracy** – solid hands-on for CNNs ahead of face recognition.
 
 ---
 
-### ✅ Week 4: Face Recognition Strategy Study
+###  Week 4: Understanding Face Recognition Strategy
 
-**Reading Material:**  
-[Face Recognition Strategy Paper – ScholarWorks](https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=1643&context=etd_projects)
+**Reading:**  
+📄 [Face Recognition Strategy & Implementation Paper – SJSU](https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=1643&context=etd_projects)
 
-**Activities:**  
-- Understood the high-level face recognition pipeline involving:  
-  - Face detection  
-  - Feature extraction (e.g., embeddings using CNNs)  
-  - Classification (e.g., k-NN, SVM)  
-- Connected concepts back to digit/code recognition (image → embedding → classification)
-
----
-
-## 🔍 What's Next (Week 5+)  
-- Start building a custom dataset with handwritten code snippets  
-- Train a CNN-based model to detect multiple lines of code  
-- Explore OpenCV for image pre-processing  
-- Consider moving toward sequence recognition (RNNs or CRNNs) for multi-character decoding
+**Insights Gained:**  
+- Face detection, cropping, and normalization pipeline  
+- Feature extraction using CNNs  
+- Emotion analysis using multi-head or multitask learning  
+- Visualization using **Grad-CAM** and heatmaps  
+- Real-time image stream handling + deployment considerations
 
 ---
 
-## 📎 References  
-- [PyTorch Crash Course](https://www.youtube.com/watch?v=GIsg-ZUy0MY)  
-- [Kaggle Python Course](https://www.kaggle.com/learn/python)  
-- [Face Recognition Article](https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=1643&context=etd_projects)
+## 🔍 What’s Next (Weeks 5+)  
+
+- Begin collecting small-scale face + emotion dataset  
+- Build initial face detection and preprocessing pipeline  
+- Fine-tune CNN on emotion-labeled face images  
+- Integrate Grad-CAM for visual interpretability  
+- Explore RNNs if working with temporal (video) data
 
 ---
 
-## 🧾 To Do  
-- [ ] Start working on real handwritten code input (Week 5)  
-- [ ] Build training pipeline  
-- [ ] Optimize model performance  
+## 📁 Folder Structure
+
 
 
