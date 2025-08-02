@@ -127,7 +127,7 @@ Conv2D → BatchNorm → Conv2D → MaxPooling → Dropout
 Conv2D → BatchNorm → Conv2D → MaxPooling → Dropout
 Flatten → Dense(512) → Dropout → Dense(256) → Dropout → Dense(7, softmax)
 
-⚙️ Training Setup
+### ⚙️ Training Setup
 Optimizer: Adam
 
 Loss: Categorical Crossentropy
@@ -177,9 +177,7 @@ Thanks to project mentors and peers for guidance & support!
  Summary
 Over 7 weeks, I went from basic image classification to building a real-world facial expression recognition system. This project brought together theory, coding, experimentation, and interpretation — giving me practical confidence in applying deep learning to vision problems.
 
-yaml
-Copy
-Edit
+
 
 
 
